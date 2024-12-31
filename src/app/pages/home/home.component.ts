@@ -1,15 +1,16 @@
 import { Component } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
-import { CarouselComponent } from "./carousel/carousel.component";
-import { ProductSliderComponent } from "./product-slider/product-slider.component";
-import { mensJens } from '../../data/Mens/mensJeans';
-import { mensShirt } from '../../data/Mens/mensShirt';
-import { mensKurta } from '../../data/Mens/mensKurta';
-import { dress } from '../../data/women/dress';
+import { mensJens } from '../../../data/Mens/mensJeans';
+import { mensShirt } from '../../../data/Mens/mensShirt';
+import { dress } from '../../../data/women/dress';
+import { mensKurta } from '../../../data/Mens/mensKurta';
+import { CarouselComponent } from '../../components/carousel/carousel.component';
+import { ProductSliderComponent } from '../../components/product-slider/product-slider.component';
+
 
 @Component({
   selector: 'app-home',
-  imports: [ButtonModule, CarouselComponent, ProductSliderComponent],
+  imports: [ CarouselComponent, ProductSliderComponent,],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

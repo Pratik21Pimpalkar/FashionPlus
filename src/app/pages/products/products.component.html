@@ -1,0 +1,18 @@
+<div class="container mx-auto my-10">
+    <p class="text-3xl font-bold p-3">Product</p>
+    <p-divider type="solid" class="border border-1 border-gray-400" />
+    <div class="grid grid-cols-4 w-full">
+        <div class="grid-cols-1">
+            <app-filters />
+        </div>
+        <div class="grid col-span-3">
+            <div class="lg:col-span-3">
+                <div class="grid grid-cols-3 gap-2 ">
+                    @for (item of mensShirt; track $index) {
+                    <app-product-card [item]="item" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

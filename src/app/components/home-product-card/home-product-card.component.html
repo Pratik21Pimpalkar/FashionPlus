@@ -8,9 +8,9 @@
 </div> -->
 
 
-<div class="grid grid-cols-5 gap-2">
+<div class="grid grid-cols-5 gap-2 ">
     @for (item of products; track $index) {
-    <div class="flex flex-col justify-center items-center p-2 shadow-lg">
+    <div class="flex flex-col justify-center items-center p-2 shadow-lg hover:scale-105 transition-all">
         <img [src]="item.imageUrl" alt="product name" class="w-full rounded-2xl h-[250px] object-contain" />
         <p class=" text-surface font-semibold text-md text-center">{{ item.title }}</p>
         <div class="flex gap-3">
