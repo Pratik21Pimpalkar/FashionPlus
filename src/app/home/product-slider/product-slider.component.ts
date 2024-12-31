@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HomeProductCardComponent } from "../home-product-card/home-product-card.component";
 
 @Component({
@@ -7,7 +7,9 @@ import { HomeProductCardComponent } from "../home-product-card/home-product-card
   templateUrl: './product-slider.component.html',
   styleUrl: './product-slider.component.scss'
 })
-export class ProductSliderComponent {
+export class ProductSliderComponent  {
+
   @Input() title: any;
   @Input() products: any;
+  
 }

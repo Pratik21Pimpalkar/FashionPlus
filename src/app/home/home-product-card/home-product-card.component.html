@@ -1,1 +1,22 @@
-<p>home-product-card works!</p>
+<!-- <div class="relative mx-auto">
+    
+    @for (item of products; track $index) {
+        <div class=""></div>
+    <img [src]="item.imageUrl" alt="product name" class="w-full rounded-border" />
+    }
+   
+</div> -->
+
+
+<div class="grid grid-cols-5 gap-2">
+    @for (item of products; track $index) {
+    <div class="flex flex-col justify-center items-center p-2 shadow-lg">
+        <img [src]="item.imageUrl" alt="product name" class="w-full rounded-2xl h-[250px] object-contain" />
+        <p class=" text-surface font-semibold text-md text-center">{{ item.title }}</p>
+        <div class="flex gap-3">
+            <p class="text-md text-surface font-medium">₹{{ item.discountedPrice }}</p>
+            <p class="text-md text-surface line-through">₹{{ item.price }}</p>
+        </div>
+    </div>
+    }
+</div>

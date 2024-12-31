@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CarouselModule } from 'primeng/carousel';
-import { carouselData } from '../../data';
+import { carouselData } from '../../../data/carousel/data';
 
 @Component({
   selector: 'app-carousel',
