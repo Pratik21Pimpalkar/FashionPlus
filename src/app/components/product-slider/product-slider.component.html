@@ -1,6 +1,8 @@
 <div class="p-5">
     <p class="font-bold text-2xl">{{title}}</p>
-    <div>
-        <app-home-product-card [products]="products" />
+    <div class="grid grid-cols-5 gap-2">
+        @for (item of products; track $index) {
+        <app-product-card [item]="item" />
+        }
     </div>
 </div>

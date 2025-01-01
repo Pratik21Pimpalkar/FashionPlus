@@ -13,8 +13,8 @@
             <div class="scroll-py-4">
                 @for (opt of item.options; track opt.key) {
                 <div class="flex items-center">
-                    <p-checkbox [inputId]="opt.key" name="group" (ngModelChange)="onCheckboxChange(item)"
-                        [value]="opt.value" [(ngModel)]="item.value" />
+                    <p-checkbox [inputId]="opt.key" name="group" (onChange)="handleMultipleSelectFilter(opt.value,item.id)"
+                         [value]="opt.value" [(ngModel)]="item.value" />
                     <label [for]="opt.key" class="ml-2"> {{ opt.label }} </label>
                 </div>
                 }

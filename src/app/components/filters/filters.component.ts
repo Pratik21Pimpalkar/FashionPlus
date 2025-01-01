@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { filters, singleFilter } from '../../../data/fitlers/filterdata';
 import { DividerModule } from 'primeng/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -13,14 +13,11 @@ import { CommonModule, NgFor } from '@angular/common';
   encapsulation: ViewEncapsulation.None
 })
 export class FiltersComponent implements OnInit {
-
+  @Input() handleMultipleSelectFilter: any;
   filterData: any;
   singleFilterData: any;
   ngOnInit() {
     this.filterData = filters
     this.singleFilterData = singleFilter
-  }
-  onCheckboxChange(item: any): void {
-    console.log('Selected checkboxes for', item.name, ':', item.value);
   }
 }
