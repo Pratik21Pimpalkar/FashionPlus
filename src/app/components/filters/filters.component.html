@@ -13,8 +13,9 @@
             <div class="scroll-py-4">
                 @for (opt of item.options; track opt.key) {
                 <div class="flex items-center">
-                    <p-checkbox [inputId]="opt.key" name="group" (onChange)="handleMultipleSelectFilter(opt.value,item.id)"
-                         [value]="opt.value" [(ngModel)]="item.value" />
+                    <p-checkbox [inputId]="opt.key" name="group"
+                        (onChange)="handleMultipleSelectFilter(opt.value,item.id)" [value]="opt.value"
+                        [(ngModel)]="item.value" class="my-1" />
                     <label [for]="opt.key" class="ml-2"> {{ opt.label }} </label>
                 </div>
                 }
@@ -31,7 +32,8 @@
             <div class="scroll-py-4">
                 @for (opt of item.options; track opt.key) {
                 <div class="flex items-center">
-                    <p-radiobutton [inputId]="opt.key" name="radioGroup" [value]="opt.value" [(ngModel)]="item.value" />
+                    <p-radiobutton [inputId]="opt.key" name="radioGroup" class="my-1" [value]="opt.value"
+                        (onClick)="handleSingleSelectFilter(opt.value,item.id)" [(ngModel)]="item.value" />
                     <label [for]="opt.key" class="ml-2"> {{ opt.label }} </label>
                 </div>
                 }
