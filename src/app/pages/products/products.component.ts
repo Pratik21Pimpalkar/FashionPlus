@@ -3,7 +3,6 @@ import { DividerModule } from 'primeng/divider';
 import { FiltersComponent } from '../../components/filters/filters.component';
 import { mensShirt } from '../../../data/Mens/mensShirt';
 import { ProductCardComponent } from '../../components/product-card/product-card.component';
-import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-products',

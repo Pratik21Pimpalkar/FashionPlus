@@ -1,10 +1,10 @@
-import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, inject, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { filters, singleFilter } from '../../../data/fitlers/filterdata';
 import { DividerModule } from 'primeng/divider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Checkbox } from 'primeng/checkbox';
 import { RadioButton } from 'primeng/radiobutton';
-import { CommonModule, NgFor } from '@angular/common';
+import { CommonModule, } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-filters',
@@ -15,8 +15,9 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class FiltersComponent implements OnInit {
 
+  router = inject(Router);
+  activatedRoute = inject(ActivatedRoute);
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   filterData: any;
   singleFilterData: any;
@@ -53,7 +54,7 @@ export class FiltersComponent implements OnInit {
 
   }
 
-  handleSingleSelectFilter(value: string, sectionId: string) {    
+  handleSingleSelectFilter(value: string, sectionId: string) {
     if (!this.activatedRoute || !this.activatedRoute.snapshot) {
       console.error('ActivatedRoute or snapshot is not defined');
       return;

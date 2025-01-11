@@ -1,1 +1,64 @@
-<p>product-details works!</p>
+<section class="p-5 lg:10 mt-10 container mx-auto">
+    <p class="text-gray-500">product/saree</p>
+    <div class="grid grid-cols-5 lg:gap-10 mt-10">
+        <div class="p-10 w-[25rem] border-gray-200 border-4 rounded-md col-span-2 ">
+            <img class="w-full object-contain"
+                src="https://rukminim1.flixcart.com/image/612/612/kmns7m80/jean/9/5/o/36-black-36-coper-buck-original-imagfg9edbsneu2s.jpeg?q=70"
+                alt="">
+        </div>
+        <div class="space-y-10 mt-10 lg:mt-0 col-span-2">
+            <div class="space-y-2">
+                <p class="font-semibold text-gray-600">Brand Name</p>
+                <p class="font-bold text-gray-900 text-xl">Product Name</p>
+            </div>
+            <div class="flex gap-5">
+                <p class="font-bold">₹999</p>
+                <p class="line-through font-semibold">₹999</p>
+                <p class="text-green-900 font-bold">75% off</p>
+            </div>
+            <div>
+                <p class="font-bold space-y-2">Size</p>
+                <div class="flex flex-wrap gap-7">
+                    <div class="flex items-center">
+                        <p-radiobutton name="size" value="S" [(ngModel)]="selectedSize" inputId="ingredient1" />
+                        <label for="ingredient1" class="ml-2">S</label>
+                    </div>
+
+                    <div class="flex items-center">
+                        <p-radiobutton name="size" value="M" [(ngModel)]="selectedSize" inputId="ingredient2" />
+                        <label for="ingredient2" class="ml-2">M</label>
+                    </div>
+
+                    <div class="flex items-center">
+                        <p-radiobutton name="size" value="L" [(ngModel)]="selectedSize" inputId="ingredient3" />
+                        <label for="ingredient3" class="ml-2">L</label>
+                    </div>
+
+                    <div class="flex items-center">
+                        <p-radiobutton name="size" value="XL" [(ngModel)]="selectedSize" inputId="ingredient4" />
+                        <label for="ingredient4" class="ml-2">XL</label>
+                    </div>
+                </div>
+                <div class="my-10  w-full inline-block">
+                    <p-button label="Add To Cart" class="w-full bg-black" (onClick)="handleAddToCart()" />
+                </div>
+
+                <div>
+                    <p class="text-gray-700">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur rem
+                        magni voluptatem
+                        deleniti reiciendis excepturi, in, deserunt ipsam consequatur delectus ea ducimus!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="my-16">
+        <p class="font-bold text-2xl">Recent Reviews & Ratings</p>
+        <div class="grid-2 grid">
+            <app-review-card/> 
+        </div>
+    </div>
+
+    <!-- Template File: app.component.html -->
+    <p-button label="Custom Button" styleClass="custom-button"></p-button>
+
+</section>
